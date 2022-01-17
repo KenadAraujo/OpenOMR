@@ -21,6 +21,7 @@ import android.widget.Button;
 
 import com.google.common.util.concurrent.ListenableFuture;
 
+import java.io.File;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -101,7 +102,12 @@ public class MainActivity extends AppCompatActivity {
                 .requireLensFacing(CameraSelector.LENS_FACING_BACK)
                 .build();
         preview.setSurfaceProvider(previewView.getSurfaceProvider());
-        Camera camera = cameraProvider.bindToLifecycle(this,cameraSelector,preview);
+
+        ImageCapture imageCapture = new ImageCapture.Builder()
+                .setTargetRotation(previewView.getDisplay().getRotation())
+                .build();
+
+        Camera camera = cameraProvider.bindToLifecycle(this,cameraSelector,imageCapture,preview);
     }
 
     private void capturarFoto() {

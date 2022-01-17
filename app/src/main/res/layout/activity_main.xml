@@ -22,8 +22,33 @@
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"/>
 
-    </androidx.camera.view.PreviewView>
+    <View
+        android:id="@+id/vMockUp"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:background="@drawable/captura_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
+    <TextView
+        android:id="@+id/tvInstrucoes"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="32dp"
+        android:textSize="24dp"
+        android:gravity="center_horizontal"
+        android:text="Posicione a folha de resposta dentro do retangulo e tire uma foto"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/vMockUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
