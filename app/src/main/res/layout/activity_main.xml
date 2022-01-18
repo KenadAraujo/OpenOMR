@@ -26,13 +26,13 @@
 
     <View
         android:id="@+id/vMockUp"
-        android:layout_width="300dp"
-        android:layout_height="400dp"
+        android:layout_width="350dp"
+        android:layout_height="450dp"
         android:background="@drawable/captura_image"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/camera_capture_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstrucoes"
         tools:visibility="visible" />
 
     <TextView
@@ -42,12 +42,10 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="32dp"
-        android:textSize="24dp"
         android:gravity="center_horizontal"
         android:text="Posicione a folha de resposta dentro do retangulo e tire uma foto"
+        android:textSize="24dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/vMockUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
